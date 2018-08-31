@@ -17,7 +17,8 @@ if git diff --exit-code --quiet html > /dev/null 2>&1; then
     echo NOTHING TO PUSH
 else
     echo PUSHING CHANGES
-    git diff | grep ^diff
+    git diff html | grep ^diff
     git commit -a -m "Deploy open-mpi/mtt to gh-pages"
-    # git push origin gh-pages
+    git show
+    git push https://ggouaillardet:$GH_TOKEN@github.com/ggouaillardet/mtt.git gh-pages
 fi
