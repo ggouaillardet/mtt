@@ -74,6 +74,7 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+    python: 3.6
 
 after_success:
 env:

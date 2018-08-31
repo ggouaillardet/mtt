@@ -1,14 +1,15 @@
 #!/bin/sh
 
-set -x
 
 echo THIS IS THE DEPLOY SCRIPT
 
-git show remote
-git show remote origin
+set -x
+
+git remote show
+git remote show origin
 
 git clone --depth=1 -b gh-pages https://github.com/open-mpi/mtt.git gh-pages
-tar -C docs -xf - . | tar -C gh-pages -xvf -
+tar -C docs -cf - . | tar -C gh-pages -xvf -
 
 cd gh-pages
 
