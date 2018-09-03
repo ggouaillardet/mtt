@@ -66,7 +66,7 @@ script:
   - $TRAVIS_BUILD_DIR/pyclient/pymtt.py --verbose $TRAVIS_BUILD_DIR/tests/bat/default_check_profile.ini
 
 before_deploy:
-  - git clone --depth=1 -b gh-pages https://github.com/open-mpi/mtt.git gh-pages && tar -C docs -cf - . | tar -C gh-pages -xf - && cd docs && doxygen Doxyfile && cd ..
+  - git clone --depth=1 -b gh-pages https://github.com/ggouaillardet/mtt.git gh-pages && tar -C docs -cf - . | tar -C gh-pages -xf - && cd docs && doxygen Doxyfile && cd ..
 
 deploy:
   provider: script
@@ -79,6 +79,6 @@ deploy:
 after_success:
 env:
   matrix:
-    secure: Nc4e0xLPCOkuF7qI56GQPvtBZb3d7yWToopwBisXfmuAWda9UkQu1oq23RBAaUKUygwImAuNMnC2UF1HVxa8+NauMZbr09nxqA0uPGvFWDs3H8bhzOUs1JGFaZrSqv0ntCZSyNwwmTSLX6ctM2shcEfTj1+4MfDeToMMLF59Ie4mUZArRgrJF596eM13oHLB6ZFNHP15OlN4WAZujmUAkKchSrOkNubETTk05TdGUA6gC6vNFtVhv7G8maM3I8TE0RdLmeAs9v1kFnz4zVo9HRTsGKGOjy3V3o38uYBOqL8ye4B6Q1OnMEPvGSMSAoM8/cc4XSfJslh8xLgcSMRqeqjx1JNDQRQqxyCt/lM856VNHhhfd14gy4eQdHuZNpXilqiYKeVmA6euGA9pJyFWgBEb4XQ96uD41LOgcHcRLse8NW8t8V+Acv/62fmYN/Rg3xhMZdwKlz01eZVOmsDI7JjyL+t9vvPeY3Mvr/h0Q19iN7JJKXcK6tbAzaFQkG0pBQnytrSkWx8z1C20ZSDH9+VncsDRJ33voAhGiD2H/8jPWeoooKSraPcM0Io1CMw0Qz9klGjDTWYbrWvs/LCfBiqqBwfYw7qQNszn/WzZRJxk4DhxnFkzJOa7K2WM+Aa3fLpAfhvcvymaxEVfCCQBFNlKZhylCA2+UohOblw2cQY=
+    secure: ks3n5Oj9q8SALZgPnMEl9rFIivvXHM3Os/m0Yc+ZRuPHI6sudpydjVFs3u6dX7ejG+CEJBwCs8ScTDVhwPTRiiIk0NebC87kvJeOA0UAP9V8nHbU2KT1N59e4VlnoQvNylLLXP4taO9XNDijEtiOc4wPxBLHTd7DnQDXJoz2ykPMqS2V6Z+dJA8mtkThV0oorneJwC1TNiR4MmP33anIsUp/WRwtdCEMYtQe/j/dsqb9+q4zNIHiAPHMh6i63CzgXQVbGdb0eQEKBMpdWX6R+yK4lLxUfsAZWqvPJgdFXJulHAtH00L20vI5YzAHaswbU86j0DK2rkePopWrt4Q6Hib3dMKP+Z+CenedH9jFxcK6C1hiGYRi4ki79QclN34JprBOCpti4Rg0feH2cngk1il1fmclgjrA9AjUjGIw9TCLPPkYV85OEy+lX/64R8B+ihrzdLEa2InPmWwFw290iFq5cyetYhHxj1ph6UVl7JyXu2hyexbH9Y32eqV/p/ZeBgpt7Vr4a/LN878v0cajNeg4eiNcSCYUuq38R0up1mwGTxUX9ktUcWneB57bkxLJ0WrDgdwiGHHEUEqsWd3Y8kdnV8ZTDnn4FsezFZPjDAH4E26epnYXAbr+qA1862lTH4sRmbHWg5xRrISesAKbIM2VoHON4ak+5R2P+J2VFvw=
   global:
     secure: Vt6ic/sIM1e44bN2uJJFQ9rkUKx7Ztzl248QHoSkLQThTGYJw8wHLTIQ4yIobsA3R12D4WlaFeEzJXnfavIxRnHb9FjrnHl/cYbNpV+rfnpEIDf5yDm/HGzmMzfPh+dGlemce4b8T+bLdJwnB/jYzsDEoEXHSjVpTIRNoBfEnnM=

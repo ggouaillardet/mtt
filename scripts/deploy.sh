@@ -24,5 +24,5 @@ else
     # some changes were detected, push everything including the html directory
     git add .
     git commit -m "Deploy updated open-mpi/mtt to gh-pages"
-    git push https://$GH_TOKEN@github.com/open-mpi/mtt.git gh-pages
+    git push https://$GH_TOKEN@github.com/ggouaillardet/mtt.git gh-pages
 fi
